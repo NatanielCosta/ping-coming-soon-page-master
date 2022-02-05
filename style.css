@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 60.2%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin-top: 60px;
+}
+
+.logo {
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.main__heading h1 {
+  color: hsl(0, 0%, 59%);
+  font-weight: 200;
+  font-family: sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main__heading span {
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.main__heading p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.main__form form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.email {
+  border-radius: 26px;
+  border: 1px solid hsl(223, 100%, 88%);
+  padding: 12px 30px;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.email::placeholder {
+  color: hsl(223, 100%, 88%);
+}
+
+.btn{
+  padding: 12px 20px;
+  background: hsl(223, 87%, 63%);
+  border: none;
+  border-radius: 26px;
+  color: hsl(0, 100%, 100%);
+  font-size: 1.4rem;
+}
+
+.main__dashboard {
+  width: 100%;
+  margin-top: 4rem;
+  
+}
+
+.dashboard-illustration {
+  width: 100%;
+}
