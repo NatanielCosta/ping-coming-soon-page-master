@@ -13,12 +13,12 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="container">
     <header class="header__logo">
-      <img class="logo" src="/images/logo.svg" alt="logo PING">
+      <img class="logo" src="./images/logo.svg" alt="logo PING">
     </header>
     <main class="main">
       <section class="main__heading">
@@ -27,32 +27,40 @@
       </section>
       <section class="main__form">
         <form action="/" method="post">
-          <input class="email" type="email" name="email-address" id="email-address" placeholder="Your email address...">
-          <span class="text-error"></span>
-          <input class="btn" type="button" value="Notify Me">
+          <div class="email-correto email_correto-js">
+            <!-- icon de correto -->
+            <div class="icon-correto">
+              <div></div>
+            </div>
+            <p>Perfect! You would notificed.</p>
+          </div>
+          <div class="box-email">
+            <input class="email email-js" type="email" name="email-address" id="email-address" placeholder="Your email address...">
+            <span class="span__email-invalido email_invalido-js">Please provide a valid email address</span>
+          </div>
+          <input class="btn btn-js" type="button" value="Notify Me">
         </form>
       </section>
       <section class="main__dashboard">
-        <img class="dashboard-illustration" src="/images/illustration-dashboard.png" alt="illustration dashboard">
+        <img class="dashboard-illustration" src="./images/illustration-dashboard.png" alt="illustration dashboard">
       </section>
     </main>
     <footer class="footer">
       <nav class="footer__nav">
         <ul>
           <li class="nav--li">
-
+            <i class="fab fa-facebook-f"></i>
           </li>
           <li class="nav--li">
-
           </li>
           <li class="nav--li">
-
+            <i class="fab fa-instagram"></i>
           </li>
         </ul>
       </nav>
-      <section class="footer__copyright">
+      <footer class="footer__copyright">
         <p>&copy; Copyright Ping. All rights reserved.</p>
-      </section>
+      </footer>
     </footer>
   </div>
   <footer>
@@ -61,5 +69,7 @@
       Coded by <a href="https://t.me/NatanielCosta">Nataniel Costa</a>.
     </p>
   </footer>
-</body>
+  <script src="https://kit.fontawesome.com/fea0e677bf.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body> 
 </html>

@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 60.2%;
+  font-size: 10px;
+  font-family: 'Libre Franklin', sans-serif;
 }
 
 body {
@@ -11,30 +14,30 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: hsl(0, 100%, 100%);
 }
 
 .container {
-  width: 90%;
+  width: 350px;
   margin-top: 60px;
 }
 
 .logo {
-  height: 20px;
-  margin-bottom: 20px;
+  height: 1.6rem;
+  margin-bottom: 3rem;
 }
 
 .main__heading h1 {
   color: hsl(0, 0%, 59%);
-  font-weight: 200;
-  font-family: sans-serif;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .main__heading span {
   color: black;
-  font-weight: 600;
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 2.4rem;
 }
 
 .main__heading p {
@@ -46,37 +49,169 @@ body {
 .main__form form {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  position: relative;
+  width: 90%;
   margin: auto;
 }
 
+.icon-correto {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: .3rem solid hsl(145, 63%, 49%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-correto div {
+  width: 1rem;
+  height: 1.7rem;
+  border-right: .3rem solid hsl(145, 63%, 49%);
+  border-bottom: .3rem solid hsl(145, 63%, 49%);
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+
+.email-correto {
+  background-color: hsl(0, 100%, 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease;
+  z-index: 100;
+}
+
+.email-correto p {
+  font-size: 1.8rem;
+  color: hsl(145, 63%, 49%);
+  font-weight: 600;
+}
+
+.box-email {
+  display: flex;
+  flex-direction: column;
+  transition: .3s ease;
+  z-index: 10;
+}
+
 .email {
+  height: 4rem;
   border-radius: 26px;
   border: 1px solid hsl(223, 100%, 88%);
-  padding: 12px 30px;
-  font-size: 1.6rem;
+  padding-left: 3rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: hsl(209, 33%, 12%);
+  outline: none;
   margin-bottom: 1rem;
+  transition: .3s ease;
 }
 
 .email::placeholder {
   color: hsl(223, 100%, 88%);
 }
 
+.email-invalido {
+  border-color: hsl(354, 100%, 66%);
+}
+
+.email-invalido::placeholder {
+  color: hsl(354, 100%, 66%);
+}
+
+.span__email-invalido {
+  color: hsl(354, 100%, 66%);
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  font-style: italic;
+  display: none;
+  transition: .3s ease;
+  text-align: left;
+}
+
 .btn{
-  padding: 12px 20px;
+  height: 4rem;
+  padding: auto;
   background: hsl(223, 87%, 63%);
   border: none;
   border-radius: 26px;
   color: hsl(0, 100%, 100%);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  outline: none;
+  cursor: pointer;
+  transition: .3s ease;
+  z-index: 10;
+}
+
+.btn:hover {
+  filter: brightness(.9);
 }
 
 .main__dashboard {
   width: 100%;
   margin-top: 4rem;
-  
+  margin-bottom: 6rem;
 }
 
 .dashboard-illustration {
   width: 100%;
+}
+
+.footer__nav ul {
+  width: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.nav--li i {
+  width: 30px;
+  height: 30px;
+  font-size: 3rem;
+  color: hsl(223, 87%, 63%);
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 59%);
+}
+
+.footer__copyright {
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 59%);
+  margin-top: 4rem;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 600px;
+  }
+
+  .main__form form {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  .email {
+    width: 37rem;
+    margin-right: 1.25rem;
+  }
+
+  .span__email-invalido {
+    margin-left: 3rem;
+  }
+
+  .btn {
+    width: 20rem;
+  }
+
+  .span__email-invalido {
+    margin-bottom: 0px;
+  }
 }
